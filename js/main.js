@@ -16,6 +16,7 @@
   var sectionItem = 0;
   var um = document.querySelector(".um");
   var dois = document.querySelector(".dois");
+  var tres = document.querySelector(".tres");
 
   // pegando o ID de cada seção
   Array.prototype.forEach.call(section, function(e) {
@@ -28,15 +29,16 @@
     
     for (sectionItem in sections) {
       // quando chega na metade da seção faz algo
-      if ((sections[sectionItem]) - 1300 <= scrollPosition) {
+      if ((sections[sectionItem]) - 100 <= scrollPosition) {
         // qual seção?
-        if (sectionItem === 'deeper') {
+        if (sectionItem === 'um') {
           um.classList.add('seja-vermelho')
-          dois.classList.remove('seja-verde')
-        // e quando sai
-        } else {
-          um.classList.remove('seja-vermelho')
-          dois.classList.add('seja-verde')
+        }
+        if (sectionItem === 'dois') {
+          dois.classList.add('seja-azul')
+        }
+        if (sectionItem === 'tres') {
+          tres.classList.add('seja-verde')
         }
       }
     }
