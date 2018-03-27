@@ -6,16 +6,15 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 }
 
 html {
-	background: #000;
+	background: #fcfcfc;
 }
 
 body {
 	font-family: 'Barlow', Helvetica, Arial, sans-serif;
-	font-weight: 500;
 	min-height: 100vh;
 	color: #57585c;
 	color: var(--color-text);
-	background-color: #000;
+	background-color: #fcfcfc;
 	background-color: var(--color-bg);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -73,12 +72,6 @@ main {
 
 .scene {
 	position: absolute;
-}
-
-.scene--left {
-	width: 100vmin;
-	height: 100vmin;
-	transform: translate3d(-50vmin,0,0);
 }
 
 .scene--full {

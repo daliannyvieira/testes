@@ -11,38 +11,69 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				height: 100vh;
+				flex-direction: column;
 				font-size: 2rem;
 				background-color: #fcfcfc;
 				font-family: sans-serif;
 				margin: 0;
 				padding: 0;
 			}
-			ul{
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				flex-direction: column;
-				width: 30vw;
-				height: 30vh;
+			a {
+				color: #333;
+				text-decoration: none;
+			}
+			ul {
 				list-style: none;
-				border: 2px solid #333;
 				margin: 0;
 				padding: 0;
 			}
-			a {
-				color: #333;
-			}
 			li {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid black;
 				padding: 0.25em;
+				width: 50vw;
+				height: 90vh;
+				margin: 20px;
+				font-size: 5rem;
+			}
+			li a {
+				position: relative;
+			}
+			li a::after {
+				content: "";
+				position: absolute;
+				width: 0;
+				height: 65%;
+				left: 0;
+				bottom: 0;
+				border-radius: inherit;
+				opacity: 0;
+				transition: all 0.2s ease-in-out;
+				z-index: -1;
+			}
+			.seja-vermelho a::after {
+				/*background-color: #FFDD00;*/
+				opacity: 1;
+				width: 100%;
+				background-color: tomato;
+			}
+
+			.seja-verde a::after  {
+				opacity: 1;
+				width: 100%;
+				background-color: green;
 			}
 		</style>
 	</head>
 <body>
 	<ul>
-		<li><a href="backgrounds/index.html">Anima01</a></li>
-		<li><a href="glitch/index.html">Anima02</a></li>
-		<li><a href="mask/index.html">Anima03</a></li>
+		<li id="deeper" class="um"><a class="example" href="backgrounds/index.html">Anima01</a></li>
+		<li class="dois"><a href="glitch/index.html">Anima02</a></li>
+		<li class="tres"><a href="mask/index.html">Anima03</a></li>
 	</ul>
+    <script type="text/javascript" src="js/smooth-scroll.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
